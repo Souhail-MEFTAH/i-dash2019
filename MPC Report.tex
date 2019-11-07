@@ -9,6 +9,9 @@
 \usepackage{fancyhdr}
 \usepackage{amsmath}
 \usepackage{index}
+\usepackage{listings}
+\usepackage{minted}
+
 
 \begin{document}
 \title{\Large{\textbf{Secure Collaborative Training of Machine Learning Model using MPC}}}
@@ -31,5 +34,26 @@
 \section{Methodology and Technologies}
 
 \section{Implementation}
+\subsection{Requirement and Setup}
+\textbf{Notice: It requires at least a setup with 12GB memory to run the code.}
+
+\begin{listing}[H]
+	\caption{Dependency Setup Code}
+	\inputminted[frame=single,framesep=10pt,linenos]{bash}{1_prep.sh}
+\end{listing}
+
+Our experiment runs on 1 machine on the Tembusu Cluster with Intel E5-2620V3, 256GB DDR3 RAM, and CentOS 7.x.x. The code has been tested on Ubuntu 18.04 as well. 
+
+\subsection{Load the Data}
+\begin{listing}[H]
+	\caption{Loading the data}
+	\inputminted[frame=single,framesep=10pt,linenos]{python3}{load_data.py}
+\end{listing}
+\subsection{Model Creation}
+\begin{listing}[H]
+	\caption{Define the model}
+	\inputminted[frame=single,framesep=10pt,linenos]{python3}{torch_model.py}
+\end{listing}
+
 
 \end{document}
