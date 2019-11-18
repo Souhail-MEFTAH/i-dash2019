@@ -26,6 +26,13 @@
 
 
 \section{Background and Motivation}
+The advance in machine learning driven by the widely application of neural networks has brought machine automation to a new level. Neural networks are deployed to replace human in making financial decisions, medical image processing and many tasks that were once believed to be `of higher intelligent requirement' and hence not solvable by machines. However, the seemingly magical power of machine learning is not a magic, but often relies on carefully crafted models and massive labeled training data to function. Under the hood of `artificial intelligence', neural networks are essentially fitting massively parameterized generic models to specific functions. Hence, huge amount of data which were previously studied and labeled is used to `teach' neural network models to `learn' the decision functions.
+
+As the decisions made by neural network getting more complicated and increasingly mission-critical, it poses a higher requirement not only on the scale of the data (e.g. it is common to use PB sized database to train AI nowadays), but also on the specificity of the data. For instance, even prior to the emerge of neural network, banks have been using generic data, such as age and credit records to make decisions for loans, but nowadays banks are using more complicated data, such as social network posts, consumption behavior and even facial expressions to make much more accurate decisions with the help of machine learning. 
+
+Now it is natural to ask one question: \textit{where to get the data?} Indeed, few institutions, not to mention individuals, independently hold data of many people with specificity high enough to train the complicated models, so data from different companies or institutions need to be combined to make it possible. On the other hand, due to the high specificity, institutions are reluctant in sharing their data because of the concerns for business interest or legal liability, and this poses a need for a technology to enable parties to use their data to jointly train a neural network with protection from the potential risk of data leakage.
+
+Our work creates a prototype of privacy-preserving federated learning applications by combining the state of the art multi-party computation framework with a realistic machine learning use case. In our work we illustrated the techniques for building a secure federated learning app, analyzed the security guarantees of our implementation and tested the performance of our prototype using experiments.
 
 \subsection{Multi-party Computation}
 
