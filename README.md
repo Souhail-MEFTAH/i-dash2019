@@ -7,6 +7,8 @@
 
 ## Track IV: Secure Collaborative Training of Machine Learning Model
 
+## run : sudo docker run -it --net=host houruomu/cs6203 jupyter notebook --allow-root
+
 ### Background: 
 Training a modern machine learning model often require a large amount of data. Oftentimes, however, data owners could be reluctant to share their data (e.g., genome data from human subjects) due to privacy concerns even though they also desire to build a better trained model. Therefore, it becomes highly important to allows two or more owners to build a joint ML model using a secure computing protocol such as Secure Multiparty Computation (SMC). This task is designed to understand the efficiency of the SMC implementation achievable in building a machine learning model for supporting a secure collaboration.
 Experimental setting: We will provide two testing datasets, and each participating team will submit an implementation of a general training algorithm so that each testing dataset can be used to train a model. We will provide an ML model directly trained on the data as a benchmark.(ML model link) The solution does not need to use the same model as the benchmark, but it is supposed to perform similarly.
