@@ -36,8 +36,16 @@ Our work creates a prototype of privacy-preserving federated learning applicatio
 
 \subsection{Multi-party Computation}
 Multi-party computation is a technique created by cryptography and distributed computing research community to enable multiple mutually distrust parties to perform computation on jointly held data. Formally, $N$ parties $p_1, p_2, ..., p_N$ each has an input $x_1, x_2, ..., x_N$ respectively. They want to collaborately compute a publicly known function $f$'s output on the inputs, i.e. $\text{out}=f(x_1, x_2, ..., x_N)$, without exposing any information about their own input other than that exposed by $\text{out}$ 
-\subsection{iDash Privacy and Security Workshop 2019: Secure genome analytics competition}
 
+In general, MPC is achieved with either of two techniques, or a combination of them: garbled circuit or secret sharing. The ability to do MPC does not come for free. Instead, it often poses a substantially higher communication and computational cost than their trusted counterpart where privacy is not a concern. Many works have been done to reduce the cost of MPC for evaluating specific function or with additional assumptions. 
+
+In our setting, we assume that the parties are honest-but-curious. In our model, all the parties behave honestly but they will attempt to discover other's input by examine the transcription of the execution passively, and we achieves privacy in the cryptographic sense even under $n-1$ corruption of the parties. In practice, this model provides data privacy guarantee against after-fact corruption, which covers majority of the security breaches. Moreover, this model reduces the burden of providing liveness and validating secret shares, and permits an efficient protocol. Notice that our prototype could be non-trivially extended to accomodate active attacks by incoporating SPDZ verified secret sharing techniques with another set of assumptions. 
+
+
+\subsection{iDash Privacy and Security Workshop 2019: Secure genome analytics competition}
+iDash Privacy and Security Workshop is an annually workshop ...
+
+Our work contributes to the topic `Secure Collaborative Training of Machine Learning Model' of the competition. We choose to work with the topics provided by the competition because it provides us with real data to start with and a clear metric to judge the result. The data used in this example consist of two sets of genome sketch labelled with cancer indicator. 12k(18k) genes were analyzed with 400(200) samples respectively. 
 \section{Methodology and Technologies}
 
 \section{Implementation}
