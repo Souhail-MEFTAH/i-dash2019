@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} The class defining our sub\PYGZhy{}network}
+\PYG{k}{class} \PYG{n+nc}{Res1d}\PYG{p}{(}\PYG{n}{nn}\PYG{o}{.}\PYG{n}{Module}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{inSize}\PYG{p}{,} \PYG{n}{outSize}\PYG{p}{,} \PYG{n}{kernel}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,),} \PYG{n}{strides}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,):}
+        \PYG{c+c1}{\PYGZsh{} code for defining the layers}
+
+    \PYG{k}{def} \PYG{n+nf}{forward}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{x}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} code for defining how the layers are composed}
+        
+\PYG{c+c1}{\PYGZsh{} The class defining the overall network}
+\PYG{k}{class} \PYG{n+nc}{Net}\PYG{p}{(}\PYG{n}{nn}\PYG{o}{.}\PYG{n}{Module}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} code for defining the layers}
+
+    \PYG{k}{def} \PYG{n+nf}{forward}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{x}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} code for defining how the layers are composed}
+\end{Verbatim}

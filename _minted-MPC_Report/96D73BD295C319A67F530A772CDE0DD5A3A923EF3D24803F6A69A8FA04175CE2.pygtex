@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} prepare dependency}
+sudo apt install \PYGZhy{}y git python3 python3\PYGZhy{}pip jupyter
+\PYG{c+c1}{\PYGZsh{} install the python dependencies}
+pip3 install jupyter syft torch torchvision pandas
+\PYG{c+c1}{\PYGZsh{} due to syft compatibility issue, we need to downgrade torch}
+pip3 install \PYGZhy{}\PYGZhy{}upgrade \PYG{n+nv}{torch}\PYG{o}{==}\PYG{l+m}{1}.1.0
+\PYG{c+c1}{\PYGZsh{} clone the repository}
+git clone https://github.com/Souhail\PYGZhy{}MEFTAH/i\PYGZhy{}dash2019.git
+\PYG{c+c1}{\PYGZsh{} launch the project}
+\PYG{n+nb}{cd} i\PYGZhy{}dash2019/
+jupyter notebook
+\end{Verbatim}

@@ -39,11 +39,10 @@ Multi-party computation is a technique created by cryptography and distributed c
 
 In general, MPC is achieved with either of two techniques, or a combination of them: garbled circuit or secret sharing. The ability to do MPC does not come for free. Instead, it often poses a substantially higher communication and computational cost than their trusted counterpart where privacy is not a concern. Many works have been done to reduce the cost of MPC for evaluating specific function or with additional assumptions. 
 
-In our setting, we assume that the parties are honest-but-curious. In our model, all the parties behave honestly but they will attempt to discover other's input by examine the transcription of the execution passively, and we achieves privacy in the cryptographic sense even under $n-1$ corruption of the parties. In practice, this model provides data privacy guarantee against after-fact corruption, which covers majority of the security breaches. Moreover, this model reduces the burden of providing liveness and validating secret shares, and permits an efficient protocol. Notice that our prototype could be non-trivially extended to accomodate active attacks by incoporating SPDZ verified secret sharing techniques with another set of assumptions. 
-
+In our setting, we assume that the parties are honest-but-curious. In our model, all the parties behave honestly but they will attempt to discover other's input by examine the transcription of the execution passively, and we achieves privacy in the cryptographic sense even under $n-1$ corruption of the parties. In practice, this model provides data privacy guarantee against after-fact corruption, which covers majority of the security breaches. Moreover, this model reduces the burden of providing liveness and validating secret shares, and permits an efficient protocol. Notice that our prototype already incorporates SPDZ framework so it is impossible to modify the input data once the computation starts, but we believe additional efforts is required to make the framework provably secure under active attack such as selective message omission, and hence we only conservatively claim security under passive corruption model.
 
 \subsection{iDash Privacy and Security Workshop 2019: Secure genome analytics competition}
-iDash Privacy and Security Workshop is an annually workshop ...
+iDash Privacy and Security Workshop is a reputable annually workshop on genome analytics where big institutions such as Google and IBM compete on. We choose to work with the workshop's topics because it represents the state-of-the-art problems in secure machine learning. 
 
 Our work contributes to the topic `Secure Collaborative Training of Machine Learning Model' of the competition. We choose to work with the topics provided by the competition because it provides us with real data to start with and a clear metric to judge the result. The data used in this example consist of two sets of genome sketch labelled with cancer indicator. 12k(18k) genes were analyzed with 400(200) samples respectively. 
 \section{Methodology and Technologies}
@@ -81,7 +80,7 @@ Our model is adapted from a well-estabilished convolutional model for analyzing 
 
 The code snippet in Listing \ref{code_model} illustrates our model definition. In \torch, the networks are defined as classes where in the \texttt{\_\_init\_\_} method the layers are defined and in \texttt{forward} method the operations to compose the layers are defined. The subnet class \texttt{Res1d} is defined with parameters \texttt{inSize, outSize, kernel, strides} to be used by the \texttt{Net} class to instatiate subnets in the layers definition. Notice that the \texttt{Net} class has a hidden parameter \texttt{dim} declared as a global variable, which corresponds to the feature space dimension of the input data.
 
-\subsection{Model Training}
+\subsection{Model Training - plain model}
 \begin{listing}[H]
 	\caption{Train the model}
 	\inputminted[frame=single,framesep=10pt,linenos]{python3}{train.py}

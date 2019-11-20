@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} read the data from the input files}
+\PYG{k}{def} \PYG{n+nf}{getSamples}\PYG{p}{(}\PYG{n}{filename}\PYG{p}{):}
+    \PYG{n}{data} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{n}{filename}\PYG{p}{,} \PYG{n}{sep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}t}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{data}\PYG{o}{.}\PYG{n}{values}\PYG{p}{[:,} \PYG{l+m+mi}{1}\PYG{p}{:]}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{()}
+
+\PYG{n}{data1} \PYG{o}{=} \PYG{n}{getSamples}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}GSE2034\PYGZhy{}Normal\PYGZhy{}train.txt\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{data2} \PYG{o}{=} \PYG{n}{getSamples}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}GSE2034\PYGZhy{}Tumor\PYGZhy{}train.txt\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} code for formatting the data to numpy arrays}
+
+\PYG{c+c1}{\PYGZsh{} partition the data into training data and test data}
+\PYG{n}{x\PYGZus{}train} \PYG{o}{=} \PYG{n}{x}\PYG{p}{[:}\PYG{n}{n\PYGZus{}train\PYGZus{}items}\PYG{p}{]}
+\PYG{n}{y\PYGZus{}train} \PYG{o}{=} \PYG{n}{y}\PYG{p}{[:}\PYG{n}{n\PYGZus{}train\PYGZus{}items}\PYG{p}{]}
+
+\PYG{n}{x\PYGZus{}test} \PYG{o}{=} \PYG{n}{x}\PYG{p}{[}\PYG{n}{n\PYGZus{}train\PYGZus{}items}\PYG{p}{:]}
+\PYG{n}{y\PYGZus{}test} \PYG{o}{=} \PYG{n}{y}\PYG{p}{[}\PYG{n}{n\PYGZus{}train\PYGZus{}items}\PYG{p}{:]}
+\end{Verbatim}
