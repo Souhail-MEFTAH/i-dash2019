@@ -1,13 +1,12 @@
 # i-dash2019
-## Meeting on 26 Sep (Thur)
-### Ruomu TODOs:
-- Go through PySyft Tutorial 13a, 13b, 13c
-- Implement benchmark model in PySyft
-- Make sure I have a working model with all the data ready
-
-## Track IV: Secure Collaborative Training of Machine Learning Model
+## NUS - CS 6203 Final Project
+This is a final class project on secure multi-party computation
+The code is still a work-in-progress. 
+The project was/is NOT an official submission to the i-dash challenge
 
 ## run : sudo docker run -it --net=host houruomu/cs6203 jupyter notebook --allow-root
+
+## Track IV: Secure Collaborative Training of Machine Learning Model
 
 ### Background: 
 Training a modern machine learning model often require a large amount of data. Oftentimes, however, data owners could be reluctant to share their data (e.g., genome data from human subjects) due to privacy concerns even though they also desire to build a better trained model. Therefore, it becomes highly important to allows two or more owners to build a joint ML model using a secure computing protocol such as Secure Multiparty Computation (SMC). This task is designed to understand the efficiency of the SMC implementation achievable in building a machine learning model for supporting a secure collaboration.
