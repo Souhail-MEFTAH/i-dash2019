@@ -1,4 +1,0 @@
-1. implementation part
-	- readme-like file for the setup; Friday
-	- code breakdown for functionality, link with theory;
-	- 
