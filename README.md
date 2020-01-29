@@ -6,6 +6,20 @@ The project was/is NOT an official submission to the i-dash challenge
 
 ## run : sudo docker run -it --net=host houruomu/cs6203 jupyter notebook --allow-root
 
+```
+conda create --name idash2019 python=3.6
+conda activate idash2019
+pip install syft==0.2.0a2 torch==1.3.0 torchvision==0.4.1 pandas jupyter jupyter_contrib_nbextensions
+jupyter contrib nbextension install --sys-prefix
+pip install nbdime
+
+git clone https://github.com/Souhail-MEFTAH/i-dash2019.git                                                                                                                                                 
+cd i-dash2019
+jupyter notebook
+```
+
+
+
 ## Track IV: Secure Collaborative Training of Machine Learning Model
 
 ### Background: 
